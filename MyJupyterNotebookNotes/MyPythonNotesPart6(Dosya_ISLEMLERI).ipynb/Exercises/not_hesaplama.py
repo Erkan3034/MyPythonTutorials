@@ -51,7 +51,7 @@ with open("notlar.txt","r",encoding= "utf-8") as file:
 
         eklenecekler_listesi.append(hesapla(i))
 
-    with open("not_sonuclari.txt","w",encoding="utf-8") as file2:
+    with open("not_sonuclari.txt","w",encoding="utf-8") as file2: # not_sonuclari.txt dosyası oluşturuluyor.
 
         for i in eklenecekler_listesi:
             file2.write(i)
