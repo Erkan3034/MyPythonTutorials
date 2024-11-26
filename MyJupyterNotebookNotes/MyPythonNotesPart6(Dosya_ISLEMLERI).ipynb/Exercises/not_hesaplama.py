@@ -3,9 +3,9 @@ def hesapla(satır):
 
     satır = satır[:-1] # listenin sonundaki \ işaretini sil.
 
-    liste = satır.split(",") # ","e göre ayırma yap.
+    liste = satır.split(",") # ","e göre ayırma yap.( liste ögelerini ,'e göre tekrar listeler)
 
-    isim = liste[0] # ismi al
+    isim = liste[0] # ismi al (,'e göre ayırma yaptığımızda isim, listenin 1. indeksinde yer alır)
 
     not1 = int(liste[1])
 
@@ -13,10 +13,9 @@ def hesapla(satır):
 
     not3 = int(liste[3])
 
-    son_not = not1 * (3/10) + not2 * (3/10) + not3 * (4/10)
+    son_not = not1 * (3/10) + not2 * (3/10) + not3 * (4/10) #Not sonucu hesaplama.
 
     if (son_not >= 90):
-
         harf = "AA"
     elif (son_not >= 85):
         harf = "BA"
@@ -43,15 +42,15 @@ def hesapla(satır):
 
 
 
-with open("notlar.txt","r",encoding= "utf-8") as file:
+with open("notlar.txt","r",encoding= "utf-8") as file: # Dosyayı aç, read et.
 
-    eklenecekler_listesi = []
+    eklenecekler_listesi = [] # Not sonuclarını tutacağımız liste.
 
-    for i in file:
+    for i in file: # dosyadaki her satır.
 
-        eklenecekler_listesi.append(hesapla(i))
+        eklenecekler_listesi.append(hesapla(i)) # gelen satırı hesapla() fonksiyonuna gönder ve işle.
 
     with open("not_sonuclari.txt","w",encoding="utf-8") as file2: # not_sonuclari.txt dosyası oluşturuluyor.
 
-        for i in eklenecekler_listesi:
+        for i in eklenecekler_listesi: # eklenecekler listesi artık sonuçları tutan liste. Ordan verileri alıp yazalım.
             file2.write(i)
