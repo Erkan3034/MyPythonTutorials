@@ -23,8 +23,8 @@ try:
     mail.ehlo()  # SMTP serverına kendimizi tanıtıyoruz.
     mail.starttls()  # Adresimizin ve Parolamızın şifrelenmesi için gerekli
 
-    # Gmail hesabınızda 2 adımlı doğrulama varsa, uygulama şifresi kullanın
-    mail.login("turguterkan55@gmail.com", "lcvi hvav xpsb puol")
+
+    mail.login("turguterkan55@gmail.com", "uygulama sifresi")
 
     mail.sendmail(mesaj["FROM"], mesaj["TO"], mesaj.as_string())
     print("Mail başarıyla gönderildi....")
