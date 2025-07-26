@@ -1,6 +1,10 @@
 import time
 import random
 
+
+"""
+crud mantıgında olusturulmus kumanda sistemi
+"""
 class Kumanda:
     def __init__(self, marka, kanal_listesi):
         self.marka = marka
