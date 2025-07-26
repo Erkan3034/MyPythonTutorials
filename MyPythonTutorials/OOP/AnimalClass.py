@@ -64,7 +64,7 @@ class At(Hayvan):
 
 # Sınıfları kullanma
 # Köpek sınıfından bir nesne oluşturma
-kopek = Kopek("Karabaş", 5, "Köpek", "Labrador")
+kopek = Kopek("Karabaş", 5, "Köpek", "Labrador") #ozellkler burdan atanır
 # Kuş sınıfından bir nesne oluşturma
 kus = Kus("Maviş", 2, "Kuş", 25)
 # At sınıfından bir nesne oluşturma
