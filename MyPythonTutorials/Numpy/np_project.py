@@ -15,7 +15,7 @@ if img is None:
 else:
     print(f"Görüntü boyutu: {img.shape}")  # Boyutu kontrol et
 
-    # Eşikleme işlemi
+    # Eşikleme islemi 
     ret, thresh1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 
     # Görüntüleri göster
